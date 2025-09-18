@@ -1,0 +1,15 @@
+name: Deploy Cloudflare Rewrite Worker
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Wrangler
+        run: npm install -g @cloudflare/wrangler
+      - name: Deploy Worker
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: wrangler deploy --env production
