@@ -1,4 +1,4 @@
-name = "frithhilton-rewrite-worker"
+name = "frithhilton-rewrite-workers"
 main = "index.js"
 compatibility_date = "2025-09-18"
 
