@@ -2,6 +2,7 @@ name = "frithhilton-rewrite-worker"
 main = "rewrite.js"
 compatibility_date = "2025-09-18"
 
-[[routes]]
-pattern = "www.frithhilton.com.ng/albums/*/*"
+[env.production]
+[[env.production.routes]]
+pattern = "www.frithhilton.com.ng/albums/*"
 zone_name = "frithhilton.com.ng"
