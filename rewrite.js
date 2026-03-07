@@ -54,6 +54,6 @@ async function handleRewrite(request) {
     }
 
     // Rewrite URL to freshPlayer.html?track={id}
-    const newUrl = `https://www.frithhilton.com.ng/pages/freshPlayer.html?track=${trackId}`;
+    const newUrl = `https://legacy.frithhilton.com/pages/freshPlayer.html?track=${trackId}`;
     return fetch(new Request(newUrl, request));
 }
